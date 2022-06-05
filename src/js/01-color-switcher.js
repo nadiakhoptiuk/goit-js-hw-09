@@ -17,10 +17,10 @@ function getRandomHexColor() {
 function startChangeColors(evt) {
   evt.target.setAttribute('disabled', '');
   refs.stopBtn.removeAttribute('disabled');
-  document.body.style.backgroundColor = `${getRandomHexColor()}`;
+  setBodyBgColor();
 
   intervalId = setInterval(() => {
-    document.body.style.backgroundColor = `${getRandomHexColor()}`;
+    setBodyBgColor();
   }, 1000);
 }
 
@@ -29,4 +29,9 @@ function stopChangeColors(evt) {
   clearInterval(intervalId);
   evt.target.setAttribute('disabled', '');
   refs.startBtn.removeAttribute('disabled');
+}
+
+// функція, яка встановлює колір на фон
+function setBodyBgColor() {
+  document.body.style.backgroundColor = `${getRandomHexColor()}`;
 }
