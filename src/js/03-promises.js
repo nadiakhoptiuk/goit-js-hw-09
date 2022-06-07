@@ -1,3 +1,4 @@
+// імпортуємо бібліотеку notiflix для сповіщень
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
