@@ -21,6 +21,7 @@ function createPromises(evt) {
 
   // створюємо проміси за обчисленими вихідними даними
   createAllPromises(dataArrayForEachPromise);
+  evt.currentTarget.reset();
 }
 
 // функція, яка забирає з форми дані і повертає їх у вигляді об'єкта
